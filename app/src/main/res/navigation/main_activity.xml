@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.sayfagecis.fragments.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/anasayfadanayagecis"
+            app:destination="@id/a_Fragment" />
+        <action
+            android:id="@+id/anasayfadanxegecis"
+            app:destination="@id/x_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/a_Fragment"
+        android:name="com.example.sayfagecis.fragments.A_Fragment"
+        android:label="fragment_a_"
+        tools:layout="@layout/fragment_a_" >
+        <action
+            android:id="@+id/adanbyegecis"
+            app:destination="@id/b_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/x_Fragment"
+        android:name="com.example.sayfagecis.fragments.X_Fragment"
+        android:label="fragment_x_"
+        tools:layout="@layout/fragment_x_" >
+        <action
+            android:id="@+id/xdenyeyegecis"
+            app:destination="@id/y_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/b_Fragment"
+        android:name="com.example.sayfagecis.fragments.B_Fragment"
+        android:label="fragment_b_"
+        tools:layout="@layout/fragment_b_" >
+        <action
+            android:id="@+id/bdenyyegecis"
+            app:destination="@id/y_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/y_Fragment"
+        android:name="com.example.sayfagecis.fragments.Y_Fragment"
+        android:label="fragment_y_"
+        tools:layout="@layout/fragment_y_" />
+    <action
+        android:id="@+id/ydenanasayfayagecis"
+        app:destination="@id/anasayfaFragment" />
+
+</navigation>
